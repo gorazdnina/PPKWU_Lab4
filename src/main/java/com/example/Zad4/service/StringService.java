@@ -122,8 +122,14 @@ public class StringService {
 
         }
 
-
-        return stringStatistics;
+        if(outputFormat.equals("xml")){
+             return xmlFile(cr);
+        } else  if(outputFormat.equals("json")){
+            return jsonFile(cr);
+        } else if(outputFormat.equals("csv")) {
+            return csvFile(cr);
+        }
+        return txtFile(cr);
     }
 
 }
