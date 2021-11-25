@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 public class AnalysisFormatRequest {
     private String inputFormat;
     private String outputFormat;
-    private String analysisString;
+    private byte[] stringStatistics;
 
 }
